@@ -1,3 +1,3 @@
 # DS and Algorithms - Prep 2024
 
-- Arrays - [Link](./Arrays/ReadMe.md)
+- Arrays - [Link](./Leetcode.Algorithms/Arrays/ReadMe.md)
