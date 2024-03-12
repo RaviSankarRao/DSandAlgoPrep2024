@@ -30,6 +30,7 @@ namespace Leetcode.Algorithms.Arrays.Easy
         {
             if (nums == null) return -1;
 
+            // Container of unique elements
             HashSet<int> hashSet = new HashSet<int>();
 
             foreach (var item in nums)
@@ -48,18 +49,47 @@ namespace Leetcode.Algorithms.Arrays.Easy
         }
 
         // Bit manipulation - Compress the array down to one variable - Compression algorithms ?
-
+        // XOR -
+        //      If one bit is 0 and corresponding bit 1 – result is 1.
+        //      Result is 0 for SAME bit type
+        // XOR of a number with itself
+        // XOR with 0 gives the same number back
+        // XOR is commutative
         public static int FindMissingNumberBitManipulation(int[] nums)
         {
             if (nums == null) return -1;
 
-            int missing = nums.Length;
-            for (int i = 0; i < nums.Length; i++)
+            int expectedXor = 0;
+            for (int i = 0; i <= nums.Length; i++)
             {
-                missing ^= i ^ nums[i];
+                expectedXor ^= i;
             }
 
-            return missing;
+            int actualXor = 0;
+            foreach (var item in nums)
+            {
+                actualXor ^= item;
+            }
+
+            return expectedXor ^ actualXor;
+        }
+
+        public static int FindMissingNumberGaussFormula(int[] nums)
+        {
+            if (nums == null) return -1;
+
+            int expectedSum = 0;
+            int actualSum = 0;
+            int i = 1;  // To track all natural numbers
+
+            foreach (var item in nums)
+            {
+                expectedSum += i;
+                i++;
+                actualSum += item;
+            }
+
+            return expectedSum - actualSum;
         }
     }
 }

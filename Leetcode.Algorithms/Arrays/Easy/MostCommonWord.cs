@@ -23,11 +23,13 @@ namespace Leetcode.Algorithms.Arrays.Easy
             string word = string.Empty;
             Dictionary<string, int> wordCount = new Dictionary<string, int>();
 
+            // Add each word to the dictionary
             foreach (var character in paragraph)
             {
+                // Add only valid alphabets
                 if (Char.IsLetter(character))
                 {
-                    word = word + character;
+                    word += character;
                 }
                 else if (!string.IsNullOrEmpty(word))
                 {
@@ -46,7 +48,7 @@ namespace Leetcode.Algorithms.Arrays.Easy
                 }
             }
 
-            // Add the last word
+            // Add the last word to the dictionary
             if (!string.IsNullOrEmpty(word))
             {
                 word = word.ToLower();
@@ -60,7 +62,7 @@ namespace Leetcode.Algorithms.Arrays.Easy
                 }
             }
 
-            // Iterate banned words and remove it from dictionary
+            // Iterate banned words and remove it from the dictionary
             foreach (var item in banned)
             {
                 if (wordCount.ContainsKey(item)) 
@@ -92,9 +94,11 @@ namespace Leetcode.Algorithms.Arrays.Easy
             StringBuilder word = new StringBuilder();
             Dictionary<string, int> wordCount = new Dictionary<string, int>();
 
+            // Add each word to the dictionary
             foreach (var character in paragraph)
             {
-                if (Char.IsLetter(character))
+                // Add only valid alphabets
+                if (char.IsLetter(character))
                 {
                     word.Append(character);
                 }
@@ -114,7 +118,7 @@ namespace Leetcode.Algorithms.Arrays.Easy
                 }
             }
 
-            // Add the last word
+            // Add the last word to the dictionary
             if (!string.IsNullOrEmpty(word.ToString()))
             {
                 string lowerWord = word.ToString().ToLower();
@@ -128,7 +132,7 @@ namespace Leetcode.Algorithms.Arrays.Easy
                 }
             }
 
-            // Iterate banned words and remove it from dictionary
+            // Iterate banned words and remove it from the dictionary
             foreach (var item in banned)
             {
                 if (wordCount.ContainsKey(item))
