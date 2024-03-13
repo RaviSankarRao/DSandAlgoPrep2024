@@ -46,6 +46,8 @@
     <Compile Include="Arrays\Easy\FirstUniqueCharacter.cs" />
     <Compile Include="Arrays\Easy\MissingNumber.cs" />
     <Compile Include="Arrays\Easy\MostCommonWord.cs" />
+    <Compile Include="LinkedList\Basics\ListNode.cs" />
+    <Compile Include="LinkedList\Basics\LinkedListOperations.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

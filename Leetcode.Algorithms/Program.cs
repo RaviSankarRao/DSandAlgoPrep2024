@@ -1,4 +1,5 @@
 ﻿using Leetcode.Algorithms.Arrays.Easy;
+using Leetcode.Algorithms.LinkedList.Basics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +12,17 @@ namespace Leetcode.Algorithms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(MissingNumber.FindMissingNumberBitManipulation(new int[] { 3, 0, 1 }));  // 2
-            Console.WriteLine(MissingNumber.FindMissingNumberBitManipulation(new int[] { 0, 1 }));     // 2
-            Console.WriteLine(MissingNumber.FindMissingNumberBitManipulation(new int[] { 9, 6, 4, 2, 3, 5, 7, 0, 1 }));        // 8
-            Console.WriteLine(MissingNumber.FindMissingNumberBitManipulation(new int[] { }));
+            ListNode linkedList = new ListNode(10, new ListNode(21, new ListNode(2, new ListNode())));
+            IterateList.PrintList(linkedList);
 
+            EndProgram();
+        }
+
+        static void EndProgram()
+        {
+            Console.WriteLine("--------------");
+            Console.WriteLine("Main ends here");
+            Console.WriteLine("--------------");
             Console.ReadLine();
         }
     }
